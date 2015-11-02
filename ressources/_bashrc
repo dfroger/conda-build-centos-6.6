@@ -1,0 +1,26 @@
+# Set PATH.
+export PATH=/usr/local/ccache/bin:/home/vagrant/miniconda3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin
+
+# Source global definitions.
+if [ -f /etc/bashrc ]; then
+        . /etc/bashrc
+fi
+
+# Use bash vim mode.
+set -o vi
+
+# Set vi as editor.
+export EDITOR=/usr/bin/vim
+
+# Configure prompt.
+PS1="\h:\W$ "
+
+# Enable programmable completion features
+if [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+fi
+
+VAGRANT_BOX_NAME=centos-6.6
+VAGRANT_BOX_VERSION=1.0.0
+
+alias upload="anaconda upload --user inria-pro-sed --channel main --channel ${VAGRANT_BOX_NAME}-${VAGRANT_BOX_VERSION}" 
