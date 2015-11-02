@@ -19,15 +19,15 @@ Create a directory and initialize the box in it:
 In the `Vagrantfile`, synchronise your conda recipe directory:
 
     config.vm.synced_folder "/path/to/repo/sed-pro-inria/conda-recipes",
-        "/home/vagrant/repo/sed-pro-inria/conda-recipes"
+      "/home/vagrant/repo/sed-pro-inria/conda-recipes"
 
 and increase cpu and memory:
 
-  # Memory and CPU.
-  config.vm.provider "virtualbox" do |v|
-    v.memory = 4096
-    v.cpus = 8
-  end
+    # Memory and CPU.
+    config.vm.provider "virtualbox" do |v|
+      v.memory = 4096
+      v.cpus = 8
+    end
 
 Start the machine, and connect to it:
 
