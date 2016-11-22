@@ -4,14 +4,14 @@
 Vagrant.configure(2) do |config|
 
   # Set vagrant box.
-  config.vm.box = "puppetlabs/centos-6.6-64-nocm"
+  config.vm.box = "puppetlabs/centos-7.2-64-nocm"
 
   #=============================================================================
   # Provisioning.
   #=============================================================================
 
   # Yum packages.
-  config.vm.provision "shell", 
+  config.vm.provision "shell",
     path: "script/yum.sh",
     privileged: true
 
@@ -45,5 +45,7 @@ Vagrant.configure(2) do |config|
     v.memory = 4096
     v.cpus = 8
   end
+
+    config.vm.synced_folder "/home/dfroger/repo/", "/home/vagrant/repo/"
 
 end

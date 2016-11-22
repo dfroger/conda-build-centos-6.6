@@ -1,5 +1,3 @@
 channels:
   - defaults
-  - inria-pro-sed
-
-#anaconda_upload: True
+  - conda-forge

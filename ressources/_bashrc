@@ -19,8 +19,3 @@ PS1="\h:\W$ "
 if [ -f /etc/bash_completion ]; then
         . /etc/bash_completion
 fi
-
-VAGRANT_BOX_NAME=centos-6.6
-VAGRANT_BOX_VERSION=1.0.0
-
-alias upload="anaconda upload --user inria-pro-sed --channel main --channel ${VAGRANT_BOX_NAME}-${VAGRANT_BOX_VERSION}" 
